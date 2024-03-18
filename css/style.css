@@ -1,0 +1,56 @@
+
+body {
+  margin: 0;
+}
+
+html,body{ 
+	background:#000000;
+}
+
+.heading {
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  width: 100%;
+}
+.heading h1 {
+  color: #0064F4;
+  font-family: 'TF2 Build';
+  font-size: 70px;
+}
+.heading h3 {
+  color: #0064F4;
+  font-family: 'TF2';
+  font-size: 20px;
+}
+#particles-js {
+  background: black;
+  height: 100vh;
+}
+
+@font-face {
+  font-family: 'TF2 Secondary';
+  src: url('../assets/TF2Secondary.woff2') format('woff2'),
+      url('../assets/TF2Secondary.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TF2';
+  src: url('../assets/TF2.woff2') format('woff2'),
+      url('../assets/TF2.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TF2 Build';
+  src: url('../assets/TF2Build.woff2') format('woff2'),
+      url('../assets/TF2Build.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

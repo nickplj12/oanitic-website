@@ -7,6 +7,11 @@ html,body{
 	background:#000000;
 }
 
+canvas {
+  position: absolute;
+  z-index: 100;
+}
+
 .heading {
   position: absolute;
   z-index: 0;
@@ -25,8 +30,6 @@ html,body{
   font-size: 20px;
 }
 #particles-js {
-  position: absolute;
-  z-index: 100;
   background: black;
   height: 100vh;
 }

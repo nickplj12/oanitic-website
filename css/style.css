@@ -7,8 +7,14 @@ html,body{
 	background:#000000;
 }
 
+canvas {
+  position: absolute;
+  z-index: 100;
+}
+
 .heading {
   position: absolute;
+  z-index: 0;
   text-align: center;
   top: 30%;
   width: 100%;

@@ -9,6 +9,7 @@ html,body{
 
 .heading {
   position: absolute;
+  z-index: 0;
   text-align: center;
   top: 30%;
   width: 100%;
@@ -24,6 +25,8 @@ html,body{
   font-size: 20px;
 }
 #particles-js {
+  position: absolute;
+  z-index: 100;
   background: black;
   height: 100vh;
 }

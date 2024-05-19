@@ -7,6 +7,29 @@ html,body{
 	background:#000000;
 }
 
+table {
+  font-family: 'TF2 Secondary';
+  color: #ffffff;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #353535;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #14141469;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid;
+  padding: 10px;
+}
 
 .heading {
   position: absolute;

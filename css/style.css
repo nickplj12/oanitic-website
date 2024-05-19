@@ -24,6 +24,15 @@ tr:nth-child(even) {
   background-color: #14141469;
 }
 
+a:visited {
+  color: blue;
+}
+
+a:active {
+  color: darkblue;
+}
+
+
 .center {
   margin: auto;
   width: 50%;

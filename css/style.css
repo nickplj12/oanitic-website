@@ -52,10 +52,19 @@ a:active {
   font-family: 'TF2 Build';
   font-size: 70px;
 }
+.heading h2 {
+  color: #0064F4;
+  font-family: 'TF2';
+  font-size: 35px;
+}
 .heading h3 {
   color: #0064F4;
   font-family: 'TF2';
   font-size: 20px;
+}
+p {
+  color: #0064F4;
+  font-family: 'TF2 Secondary';
 }
 #particles-js {
   background: black;

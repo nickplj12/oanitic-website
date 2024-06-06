@@ -15,8 +15,3 @@ window.addEventListener('DOMContentLoaded', () => {
         button.style.top = Math.floor(Math.random() * (maxHeight + 1)) + 'px';
     });
 });
-
-window.onpopstate=function()
-{
-  alert("Back/Forward clicked!");
-}

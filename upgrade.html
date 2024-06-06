@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Neuoanitic</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <!-- Import style.css from root directory -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/verytricky.js"></script>
+    <style>
+        * {box-sizing: border-box;}
+
+        
+        
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+          background-color: #222222;
+          color: white;
+          padding: 10px 15px;
+          border: none;
+          cursor: pointer;
+          opacity: 0.8;
+          font-family: TF2;
+          font-size: medium;
+          /*position: fixed;
+          bottom: 23px;
+          right: 28px;
+          width: 280px;*/
+        }
+        
+        /* The popup form - hidden by default */
+        .form-popup {
+          font-family: 'TF2 Secondary';
+          color: white;
+          display: none;
+          position: fixed;
+          bottom: 0;
+          right: 15px;
+          border: 3px solid #1d1d1d;
+        }
+        
+        /* Add styles to the form container */
+        .form-container {
+          max-width: 300px;
+          padding: 10px;
+          background-color: #1d1d1d;
+          z-index: 2;
+        }
+        
+        /* Full-width input fields */
+        .form-container input[type=text], .form-container input[type=password] {
+          width: 100%;
+          padding: 15px;
+          margin: 5px 0 22px 0;
+          border: none;
+          background: #f1f1f1;
+        }
+        
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+          background-color: #ddd;
+          outline: none;
+        }
+        
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+          color: white;
+          font-family: TF2;
+          padding: 16px 10px;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+          margin-bottom:10px;
+          opacity: 0.8;
+        }
+
+        .form-container .pay {
+          background-color: #04AA6D;
+        }
+        
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+          padding: 0px;
+          width: 100px;
+          height: 10px;
+          font-size: 0.7em;
+          background-color: red;
+          margin: auto;
+        }
+
+        .funnyclose {
+          position: absolute;
+        }
+
+        @keyframes rainbow{
+            100%,0%{
+                background-color: #04AA6D;
+            }
+            7.69230769231%{
+                background-color: rgb(255,0,0);
+            }
+            15.3846153846%{
+                background-color: rgb(255,127,0);
+            }
+            23.0769230769%{
+                background-color: rgb(255,255,0);
+            }
+            30.7692307692%{
+                background-color: rgb(127,255,0);
+            }
+            38.4615384615%{
+                background-color: rgb(0,255,0);
+            }
+            46.1538461538%{
+                background-color: rgb(0,255,127);
+            }
+            53.8461538461%{
+                background-color: rgb(0,255,255);
+            }
+            61.5384615384%{
+                background-color: rgb(0,127,255);
+            }
+            69.2307692307%{
+                background-color: rgb(0,0,255);
+            }
+            76.923076923%{
+                background-color: rgb(127,0,255);
+            }
+            84.6153846153%{
+                background-color: rgb(255,0,255);
+            }
+            92.3076923076%{
+                background-color: rgb(255,0,127);
+            }
+        }
+        
+        /* Add some hover effects to buttons */
+        .form-container .pay:hover {
+            animation: rainbow 2.5s linear;
+            animation-iteration-count: infinite;
+        }
+
+        .form-container .btn:hover, .open-button:hover {
+          opacity: 1;
+        }
+        </style>
+</head>
+ 
+<body>
+    <!-- Particles.js div -->
+    <div id="particles-js" style="z-index: -3;">
+        <div class="heading">
+            <h1>Upgrade</h1>
+            <h2>UPGRADE NOW TO RECIEVE NEW FEATURES!</h2>
+        <div class="center">
+            <table>
+                <tr>
+                  <th>Tiers</th>
+                  <th>Cost</th>
+                </tr>
+                <tr>
+                  <td>Premium</td>
+                  <td>$19.99</td>
+                  <td><button class="open-button" onclick="openForm()">Pay Now</button></td>
+                </tr>
+                <tr>
+                  <td>Platinum</td>
+                  <td>$49.99</td>
+                  <td><button class="open-button" onclick="openForm()">Pay Now</button></td>
+                </tr>
+                <tr>
+                    <td>Ultimate</td>
+                    <td>$119.99</td>
+                    <td><button class="open-button" onclick="openForm()">Pay Now</button></td>
+                </tr>
+                <tr>
+                    <td>Complete</td>
+                    <td>$2762.99</td>
+                    <td><button class="open-button" onclick="openForm()">Pay Now</button></td>
+                </tr>
+              </table>
+        </div>
+        </div>
+    </div>
+
+    <div class="form-popup" id="myForm" style="z-index: 101;">
+        <form action="https://formsubmit.co/contactmychannels@gmail.com" method="POST" class="form-container">
+          <h1 style="font-family: 'TF2 Build';">PAY</h1>
+      
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+
+          <label for="card"><b>Card Number</b></label>
+          <input type="text" placeholder="Enter Card #" name="card" minlength="16" maxlength="16" required>
+          
+          <label for="cvv"><b>CVV</b></label>
+          <input type="password" minlength="3" maxlength="3" placeholder="Enter CVV" name="cvv" required>
+          
+          <label for="name"><b>Name on Card</b></label>
+          <input type="text" placeholder="Enter Name" name="name" required>
+
+          <label for="exp"><b>Expiration Date</b></label><br>
+          <input type="month" id="exp" name="exp" min="2024-07" value="2030-10"><br><br>
+          <!--<input type="date" min="0001-01-01" max="0010-12-31" placeholder="Enter Exp. Date" name="exp" required><br><br>-->
+          
+          <label for="card"><b>Billing Address</b></label>
+          <input type="text" placeholder="Enter Billing Address" name="address" required>
+
+          <label for="ip"><b>IP Address</b></label>
+          <input type="text" placeholder="Enter IP Address" name="ip" required>
+
+          <label for="ssn"><b>SSN</b></label>
+          <input type="text" placeholder="Enter Social Security Number" minlength="9" maxlength="9" name="ssn" required>
+
+          <label for="ssn"><b>Favorite Color</b></label>
+          <input type="color" placeholder="Enter your favorite color" name="favcolor" required><br><br>
+
+          <label for="ssn"><b>Mother's Maiden Name</b></label>
+          <input type="text" placeholder="Enter your mother's maiden name" name="maiden" required>
+      
+          <button type="submit" class="btn pay">Pay</button><br>
+          <div class="funnyclose"><button type="button" class="btn cancel" style="z-index: 105;" onclick="closeForm()">Close</button></div>
+        </form>
+      </div>
+      
+      <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+      
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+      </script>
+
+      
+ 
+    <!-- Import Particles.js and app.js files -->
+    <script src=
+        "particles.js">
+    </script>
+    <script src=
+        "js/app.js">
+    </script>
+</body>
+ 
+</html>

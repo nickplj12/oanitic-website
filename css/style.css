@@ -1,0 +1,103 @@
+
+body {
+  margin: 0;
+}
+
+html,body{ 
+	background:#000000;
+}
+
+table {
+  font-family: 'TF2 Secondary';
+  color: #ffffff;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #353535;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #14141469;
+}
+
+a:visited {
+  color: blue;
+}
+
+a:active {
+  color: darkblue;
+}
+
+
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid;
+  padding: 10px;
+}
+
+.heading {
+  position: absolute;
+  z-index: 100;
+  text-align: center;
+  top: 30%;
+  width: 100%;
+}
+.heading h1 {
+  color: #0064F4;
+  font-family: 'TF2 Build';
+  font-size: 70px;
+}
+.heading h2 {
+  color: #0064F4;
+  font-family: 'TF2';
+  font-size: 35px;
+}
+.heading h3 {
+  color: #0064F4;
+  font-family: 'TF2';
+  font-size: 20px;
+}
+p {
+  color: #0064F4;
+  font-family: 'TF2 Secondary';
+}
+#particles-js {
+  background: black;
+  height: 100vh;
+}
+
+#particles-js canvas {
+  position: absolute;
+}
+
+@font-face {
+  font-family: 'TF2 Secondary';
+  src: url('../assets/TF2Secondary.woff2') format('woff2'),
+      url('../assets/TF2Secondary.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TF2';
+  src: url('../assets/TF2.woff2') format('woff2'),
+      url('../assets/TF2.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TF2 Build';
+  src: url('../assets/TF2Build.woff2') format('woff2'),
+      url('../assets/TF2Build.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
